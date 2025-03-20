@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rajdhani_semibold"
+            android:text="@string/app_name"
+            android:textColor="@color/bgTextColor"
+            android:textSize="@dimen/_18sdp" />
+
+        <ImageView
+            android:id="@+id/ivSetting"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_setting_unselect"
+            app:tint="@color/bgTextColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/bg_rounded_layout"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_rounded_layout1">
+
+            <TextView
+                android:id="@+id/spinnerSort"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/sort_prompt"
+                android:paddingEnd="30dp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/archivo_medium"/>
+
+            <ImageView
+                android:id="@+id/ivDropdownArrowSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_arrow_down" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_rounded_layout1"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/spinnerFilter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/filter_prompt"
+                android:paddingEnd="30dp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/archivo_medium"/>
+
+            <ImageView
+                android:id="@+id/ivDropdownArrowFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor">
+
+        <!-- Progress Bar for Loading -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:indeterminateTint="@color/buttonColor"
+            style="?android:attr/progressBarStyleLarge" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bgColor"
+            android:scrollbars="vertical" />
+
+        <LinearLayout
+            android:id="@+id/emptyStateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:src="@drawable/ic_empty_state" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/archivo_regular"
+                android:text="No tasks yet! Let's add something great."
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/ic_input_add"
+            app:tint="@color/buttonTextColor"
+            app:backgroundTint="@color/buttonColor" />
+
+    </RelativeLayout>
+
+</LinearLayout>

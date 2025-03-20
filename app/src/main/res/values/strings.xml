@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Interactive Task Manager</string>
+
+
+    <string name="sort_prompt">Sort by</string>
+    <string name="filter_prompt">Filter by</string>
+</resources>

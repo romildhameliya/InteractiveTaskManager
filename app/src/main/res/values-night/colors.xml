@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="bgColor">#121212</color>
+    <color name="bgTextColor">#FFFFFF</color>
+    <color name="buttonColor">#FF5B01</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="fgColor">#2A2A2A</color>
+    <color name="fgTextColor">#FFFFFF</color>
+    <color name="transparent">#00757575</color>
+    <color name="grey">#8F98A9</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="priority">#88ABE2</color>
+</resources>
